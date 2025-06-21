@@ -22,7 +22,10 @@ public class NinjaModel {
     private Long id;
 
     private String name;
+
+    @Column(unique = true)
     private String email;
+
     private int age;
 
     //ninjas*(many) could only have one mission per time - n-1

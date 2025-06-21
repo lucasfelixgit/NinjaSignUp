@@ -2,6 +2,9 @@ package dev.java10x.NinjaSignUp.Ninjas;
 
 import dev.java10x.NinjaSignUp.Missions.MissionsModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
@@ -9,6 +12,9 @@ import java.util.List;
 //Entity: Turns our class into a Database Entity
 @Entity
 @Table(name = "tb_ninja_signup")
+@NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class NinjaModel {
 
     @Id
@@ -23,37 +29,5 @@ public class NinjaModel {
     @ManyToOne
     @JoinColumn(name = "missions_id") //foreign key
     private MissionsModel mission;
-
-    public NinjaModel(){}
-
-    public NinjaModel(String name, String email, int age) {
-        this.name = name;
-        this.email = email;
-        this.age = age;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public int getAge() {
-        return age;
-    }
-
-    public void setAge(int age) {
-        this.age = age;
-    }
 
 }

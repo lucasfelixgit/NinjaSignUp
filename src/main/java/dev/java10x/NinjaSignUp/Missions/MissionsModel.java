@@ -2,11 +2,17 @@ package dev.java10x.NinjaSignUp.Missions;
 
 import dev.java10x.NinjaSignUp.Ninjas.NinjaModel;
 import jakarta.persistence.*;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.List;
 
 @Entity
 @Table(name = "tb_missions")
+@AllArgsConstructor
+@NoArgsConstructor
+@Data
 public class MissionsModel {
 
     @Id
